@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Log Viewer
+GenericName=Log and Text File Viewer
+X-GNOME-FullName=Log and Text File Viewer
+Comment=View and search log, output, and text files with ANSI color support
+Exec=/opt/LogViewer/log_viewer_start.sh
+Terminal=false
+Icon=LogViewer
+Type=Application
+StartupNotify=true
+Categories=GTK;GNOME;System;Utility;
+Name[en_US]=Log Viewer
