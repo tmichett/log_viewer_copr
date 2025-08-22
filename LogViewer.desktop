@@ -1,0 +1,19 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LogViewer
+GenericName=Log File Viewer
+Comment=A GUI application for viewing and searching through log files with ANSI color support
+Exec=/opt/LogViewer/log_viewer_start.sh %F
+Icon=/opt/LogViewer/smallicon.png
+Terminal=false
+StartupNotify=true
+Categories=System;Utility;TextEditor;
+MimeType=text/plain;text/x-log;application/x-log;
+Keywords=log;viewer;text;search;ansi;color;
+StartupWMClass=LogViewer
+Actions=OpenFile;
+
+[Desktop Action OpenFile]
+Name=Open File
+Exec=/opt/LogViewer/log_viewer_start.sh

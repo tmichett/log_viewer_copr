@@ -1,0 +1,7 @@
+# This is a placeholder for the LogViewer icon
+# In a real build, this should be a proper PNG icon file (16x16 or 32x32 pixels)
+# You can create an icon using any image editor and save it as smallicon.png
+# 
+# For now, this text file serves as a placeholder to prevent build errors
+# The application will still function without the icon, though it may not
+# display properly in desktop environments

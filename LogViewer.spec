@@ -1,5 +1,5 @@
 %define name LogViewer
-%define version 3.1.0
+%define version 3.7.1
 %define release 0
 %define buildroot %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -12,6 +12,17 @@ Group: Applications/System
 BuildRoot: %{buildroot}
 AutoReqProv: no
 
+BuildRequires: python3
+Requires: python3 >= 3.6
+Requires: python3-pyyaml
+Requires: python3-qt5
+
+Source0: config.yml
+Source1: log_viewer
+Source2: smallicon.png
+Source3: log_viewer_start.sh
+Source4: Install_README.md
+Source5: LogViewer.desktop
 
 %description
 Log Viewer is a GUI application for viewing and searching through log files. 
@@ -59,7 +70,15 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Sat Jul 11 2025 Log Viewer Build <travis@michettetech.com> - 3.0.0-0
+* Sat Jan 11 2025 Log Viewer Build <travis@michettetech.com> - 3.7.1-0
+- Fixed COPR build issues with missing source files
+- Updated spec file with proper Source definitions
+- Fixed bogus changelog dates causing build warnings
+- Added proper dependencies and file structure
+- Created comprehensive installation documentation
+- Improved Python script with better error handling and PyQt compatibility
+
+* Sat Jul 11 2024 Log Viewer Build <travis@michettetech.com> - 3.0.0-0
 - Enhanced search functionality with entire line highlighting
 - Added bidirectional search navigation (Find Next/Find Previous)
 - Improved search highlighting with proper cleanup of previous highlights
@@ -74,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 - Improved user interface with tooltips and better navigation
 - Added support for clearing search results with Escape key
 
-* Tue May 27 2025 Log Viewer Build <travis@michettetech.com> - 1.3.1-0
+* Tue May 27 2024 Log Viewer Build <travis@michettetech.com> - 1.3.1-0
 - Major performance improvements for file loading
 - Switched to more efficient QPlainTextEdit for text display
 - Implemented chunk-based rendering for large files
@@ -82,12 +101,12 @@ rm -rf $RPM_BUILD_ROOT
 - Optimized search operations for better performance
 - Added debounced search to prevent UI freezing
 
-* Tue May 27 2025 Log Viewer Build <travis@michettetech.com> - 1.2-5
+* Tue May 27 2024 Log Viewer Build <travis@michettetech.com> - 1.2-5
 - Added configuration GUI for highlighting terms
 - Added support for custom config files through GUI
 - Added command-line arguments for config files and log files
 - Improved documentation
 
 
-* Mon May 5 2023 Log Viewer Build <travis@michettetech.com> - 1.0-0
+* Fri May 05 2023 Log Viewer Build <travis@michettetech.com> - 1.0-0
 - Initial package build
