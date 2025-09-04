@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /opt/LogViewer
-./log_viewer "$@" &
+exec ./log_viewer "$@"
 exit
