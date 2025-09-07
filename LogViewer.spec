@@ -1,5 +1,5 @@
 %define name LogViewer
-%define version 3.9.5
+%define version 4.0.1
 %define release 0
 %define buildroot %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -71,6 +71,13 @@ rm -rf $RPM_BUILD_ROOT
 /usr/bin/LogViewer
 
 %changelog
+* Sun Sept 7 2025 Log Viewer Build <travis@michettetech.com> - 4.0.1
+- Version bump to 4.0.1
+- Added Case sensitive searching for config file and on-the-fly search
+- Enhanced log output to display ASCII and UNICCODE characters from log
+- Updated COPR build process
+- All features from previous releases included and refined
+
 * Thur Sept 4 2025 Log Viewer Build <travis@michettetech.com> - 3.9.5
 - Version bump to 3.9.5
 - Major feature release with comprehensive log analysis capabilities
